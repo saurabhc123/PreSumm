@@ -185,10 +185,21 @@ python train.py  -task abs -mode train -bert_data_path BERT_DATA_PATH -dec_dropo
 # HOW TO RUN THE CODE WITHOUT ERRORS
  The code makes some assumption on how it accesses data. Also, ensure that you are using Torch 1.1.0. The latest version gives error.
  
-##The data is stored in the bert_data folder. The script uses an environment variable named BERT_DATA_PATH to load the training data. Set this variable to the right value as follows
+The data is stored in the bert_data folder. The script uses an environment variable named BERT_DATA_PATH to load the training data. Set this variable to the right value as follows
  
  ```
- export BERT_DATA_PATH={bert_data_folder_path}/cnndm.
+ export BERT_DATA_PATH={bert_data_folder_path}/cnndm
+ 
+ echo $BERT_DATA_PATH 
+ /home/saurabc/Documents/work/source/PreSumm/bert_data/cnndm
+
+ 
  export MODEL_PATH={models_folder_path}
+ 
+ echo $MODEL_PATH
+/home/saurabc/Documents/work/source/PreSumm/models
+
+
+ 
 
 ```
