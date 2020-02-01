@@ -1,4 +1,4 @@
-# PreSumm
+# PreSumm - REFER TO THE NOTES AT THE END ON HOW TO SET THE ENVIRONMENT VARIABLES, AFTER FOLLOWING THE INSTRUCTIONS.
 
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
 
@@ -178,3 +178,15 @@ python train.py  -task abs -mode train -bert_data_path BERT_DATA_PATH -dec_dropo
 * `MODEL_PATH` is the directory of saved checkpoints
 * use `-mode valiadte` with `-test_all`, the system will load all saved checkpoints and select the top ones to generate summaries (this will take a while)
 
+
+
+# HOW TO RUN THE CODE WITHOUT ERRORS
+ The code makes some assumption on how it accesses data. Also, ensure that you are using Torch 1.1.0. The latest version gives error.
+ 
+##The data is stored in the bert_data folder. The script uses an environment variable named BERT_DATA_PATH to load the training data. Set this variable to the right value as follows
+ 
+ ```
+ export BERT_DATA_PATH={bert_data_folder_path}/cnndm.
+ export MODEL_PATH={models_folder_path}
+
+```
